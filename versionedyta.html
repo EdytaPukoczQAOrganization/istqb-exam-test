@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>El examen ISTQB online</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id='header'>
+        <h1>Registro Examen ISTQB</h1>
+        <p>Developed with HTML5, CSS3 and Javascript!</p>
+    </section>
+    
+    <section id='singup'>
+        <h2>Sign Up</h2>
+        <form id='formsingup'>
+            <label>Nombre:</label>
+            <input type="text" id="welcomename"  placeholder="your name" required minlength = 3 maxlength = 30>
+            <label>Apellidos</label>
+            <input type="text" id="welcomesurname" placeholder="your surname" required minlength = 3 maxlength = 30>
+            <button type="button" onclick="registrarseValidado()">Registrarse</button>
+        </form>
+        <p></p>
+        <p id="mensaje"></p>
+     </section>
+    
+     <section id='exam' hidden>
+        <h2>Exam</h2>
+        <form  id="formQuestion1">
+            <label>What is the main difference between testing and debugging?</label>
+            <select id="respuestaExamen">
+                <option value="respuesta1">Testing is the process of finding defects, while debugging is the process of
+                    fixing defects.</option>
+                <option value="respuesta2">Testing verifies requirements, while debugging verifies design.</option>
+                <option value="respuesta3">Testing is the process of running software, while debugging is the process of
+                    analyzing the software.</option>
+                <option value="respuesta4">Sin respuesta</option>
+
+            </select>
+            <p></p>
+            <button type="button" onclick="corregirRespuesta()">Corregir</button>
+
+        </form>
+    
+    <br></br>
+    <p id="puntuacion">Tu puntuación: </p>
+        
+     </section>
+      
+    <footer>
+        <p>Author: Edyta Pukocz</p>
+    </footer>
+
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
