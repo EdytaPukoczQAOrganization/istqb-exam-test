@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>El examen ISTQB online</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id='header'>
+        <h1>Registro Examen ISTQB</h1>
+        <p>Developed with HTML5, CSS3 and Javascript!</p>
+    </section>
+
+    <section id='singup'>
+        <h2>Sign Up</h2>
+        <form id='formsingup'>
+            <label>Nombre:</label>
+            <input type="text" id="welcomename" placeholder="your name" required minlength=3 maxlength=30>
+            <label>Apellidos</label>
+            <input type="text" id="welcomesurname" placeholder="your surname" required minlength=3 maxlength=30>
+            <button type="button" onclick="registrarseValidado()">Registrarse</button>
+        </form>
+        <p></p>
+        <p id="mensaje"></p>
+    </section>
+
+    <section id='exam' hidden>
+        <h2>Exam</h2>
+        <form id="formQuestion1">
+            <label>What is the main difference between testing and debugging?</label>
+            <select id="respuestaExamen0">
+                <option value="respuesta1">Testing is the process of finding defects, while debugging is the process of
+                    fixing defects.</option>
+                <option value="respuesta2">Testing verifies requirements, while debugging verifies design.</option>
+                <option value="respuesta3">Testing is the process of running software, while debugging is the process of
+                    analyzing the software.</option>
+                <option value="respuesta4">Sin respuesta</option>
+
+            </select>
+            <p id="puntuacion0">Tu puntuación: </p>
+            <p></p>
+
+            <label>You work in a team that develops a mobile application for ordering food.
+                In the current iteration the team decides to implement the payment
+                functionality.Which of the following activities is a part of test analysis?
+            </label>
+            <select id="respuestaExamen1">
+                <option value="respuesta1">Perform the effort estimation for testing the integration of the mobile
+                    application with the payment service.</option>
+                <option value="respuesta2">Decide whether to test the ability to split payments among multiple users - correcta.</option>
+                <option value="respuesta3">Using boundary value analysis (BVA) to derive the test data for the test cases
+                    that check the correct payment processing for the minimum allowed amount to
+                    be paid.</option>
+                <option value="respuesta4">Sin respuesta</option>
+
+            </select>
+            <p id="puntuacion1">Tu puntuación: </p>
+            <p></p>
+
+            <label>Which of the following statements BEST describes how value is added by
+                establishing and maintaining traceability between the test base and the
+                test ware?</label>
+            <select id="respuestaExamen2">
+                <option value="respuesta1">Maintenance testing can be fully automated on the basis of changes to the
+                    original requirements - correcta.</option>
+                <option value="respuesta2">Whether or not the targeted coverage has been achieved can be more
+                    efficiently determined - correcta.</option>
+                <option value="respuesta3">The test management role can determine which testers found the defects with
+                    the highest severity.</option>
+                <option value="respuesta4">Sin respuesta</option>
+
+            </select>
+            <p id="puntuacion2">Tu puntuación: </p>
+            <p></p>
+
+            <label>Which of the following statements BEST compares the different roles in
+                testing?</label>
+            <select id="respuestaExamen3">
+                <option value="respuesta1">The testing role executes test cases, the test management role plans and
+                    monitors the testing activities and reports the deviation to all testers.</option>
+                <option value="respuesta2">The testing role performs test analysis and test design activities, creates and
+                    executes test cases, and the test management role coordinates testing
+                    resources and reports to stakeholders.</option>
+                <option value="respuesta3">The testing role decides the tests to be automated and prioritizes test cases,
+                    and the test management role analyzes risks and prioritizes tests.</option>
+                <option value="respuesta4">Sin respuesta</option>
+
+            </select>
+            <p id="puntuacion3">Tu puntuación: </p>
+            <p></p>
+
+            <label>Which of the following BEST explains a benefit of independence of
+                testing?</label>
+            <select id="respuestaExamen4">
+                <option value="respuesta1">The use of an independent test team allows project management to assign
+                    responsibility for the quality of the final deliverable to the test team.</option>
+                <option value="respuesta2">If a test team external to the organization can be afforded, then there are distinct
+                    benefits in terms of this external team not being so easily swayed by the delivery
+                    concerns of project management and the need to meet strict delivery deadlines.</option>
+                <option value="respuesta3">An independent test team can work separately from the developers, need not
+                    be distracted with project requirement changes, and can restrict
+                    communication with the developers to defect reporting through the defect
+                    management system.</option>
+                <option value="respuesta4">Sin respuesta</option>
+
+            </select>
+            <p id="puntuacion4">Tu puntuación: </p>
+            <p></p>
+
+            <label>How is the whole team approach present in the interactions between
+                testers and business representatives?</label>
+            <select id="respuestaExamen5">
+                <option value="respuesta1">Business representatives decide together with project management on test
+                    automation approaches.</option>
+                <option value="respuesta2">Testers help business representatives to define test strategy.</option>
+                <option value="respuesta3">Testers help business representatives to create suitable acceptance tests.</option>
+                <option value="respuesta4">Sin respuesta</option>
+
+            </select>
+            <p id="puntuacion5">Tu puntuación: </p>
+            <p></p>
+
+            <label>Which of the following statements BEST describes a good practice for
+                testing that applies to all software development lifecycles?</label>
+            <select id="respuestaExamen6">
+                <option value="respuesta1">Testing should be performed only after development is complete.</option>
+                <option value="respuesta2">Testing should be performed under the leadership of development.</option>
+                <option value="respuesta3">Testing should start early in the development process.</option>
+                <option value="respuesta4">Sin respuesta</option>
+
+            </select>
+            <p id="puntuacion6">Tu puntuación: </p>
+            <p></p>
+
+            <label>Which of the following statements BEST describes the acceptance testdriven development (ATDD) approach?</label>
+            <select id="respuestaExamen7">
+                <option value="respuesta1">In ATDD, acceptance criteria are typically created based on the
+                    given/when/then format.</option>
+                <option value="respuesta2">In ATDD, test cases are developed first and then the software is implemented
+                    incrementally against the test cases and defined acceptance criteria.</option>
+                <option value="respuesta3">In ATDD, tests are derived from acceptance criteria as part of the system
+                    design.</option>
+                <option value="respuesta4">Sin respuesta</option>
+
+            </select>
+            <p id="puntuacion7">Tu puntuación: </p>
+            <p></p>
+
+            <label>Which of the following is NOT an example of the shift left approach?</label>
+            <select id="respuestaExamen8">
+                <option value="respuesta1">Reviewing the user requirements before they are formally accepted by the
+                    stakeholders.</option>
+                <option value="respuesta2">Executing a performance efficiency test for a component during component
+                    testing</option>
+                <option value="respuesta3">Execution of non-functional tests, starting during system level testing.</option>
+                <option value="respuesta4">Sin respuesta</option>
+
+            </select>
+            <p id="puntuacion8">Tu puntuación: </p>
+            <p></p>
+
+            <label>Which of the arguments below would you use to convince your manager
+                to organize retrospectives at the end of each release cycle?</label>
+            <select id="respuestaExamen9">
+                <option value="respuesta1">Retrospectives are very popular these days and clients would appreciate it if
+                    we added them to our processes.</option>
+                <option value="respuesta2">Performing regular retrospectives will save the organization money because
+                    end user representatives do not provide immediate feedback about the
+                    product.</option>
+                <option value="respuesta3">Process weaknesses identified during the retrospective can be analyzed and
+                    serve as a to do list for the organization’s continuous process improvement
+                    program.</option>
+                <option value="respuesta4">Sin respuesta</option>
+
+            </select>
+            <p id="puntuacion9">Tu puntuación: </p>
+            <p></p>
+
+            <button type="button" onclick="corregirExamen()">Finalizar examen</button>
+            <p id="puntuacionFinal"></p>
+            
+
+        </form>
+
+        <br></br>
+        
+
+
+    </section>
+
+    <footer>
+        <p>Author: Edyta Pukocz</p>
+    </footer>
+
+
+    <script src="ejercicio4.js"></script>
+</body>
+
+</html>
