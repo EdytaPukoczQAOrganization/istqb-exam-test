@@ -9,7 +9,7 @@ https://edytapukoczqaorganization.github.io/istqb-exam-test/
 
 ## JIRA PROJECT
 [JIRA PROJECT](https://edytapukoczqa.atlassian.net/jira/software/projects/TEI/boards/72)
-This project is using JIRA tool for project management and defect traking following agile methodology KANBAB.
+This project is using JIRA tool for project management and defect traking following agile methodology KANBAN.
 
 
 ## E2E TEST EXECUTION
