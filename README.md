@@ -18,5 +18,5 @@ This project is using JIRA tool for project management and defect traking follow
 
 
 ## AUTHOR
-Edyta Pukocz, QA Junior
+Edyta Pukocz, Junior QA
 [LinkedIn Profile](https://www.linkedin.com/in/edyta-pukocz/)

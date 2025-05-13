@@ -2,8 +2,8 @@
 function registrarse() {
     let name = document.getElementById("welcomename").value;
     let surname = document.getElementById("welcomesurname").value;
-    let mensaje = "Bienvenid@, " + name + " "+ surname;
-    
+    let mensaje = "Bienvenid@, " + name + " " + surname;
+
     //Mostrar el mensaje
     document.getElementById("mensaje").textContent = mensaje.toUpperCase();
 
@@ -19,38 +19,59 @@ function registrarseValidado() {
     let formulario = document.getElementById("formsingup");
 
     //Ponemos la condición
-    if(formulario.checkValidity()){
+    if (formulario.checkValidity()) {
         registrarse();
         //Como los datos son válidos se muestra la sección Examen
         document.getElementById("exam").style.display = "block";
     }
 
-    else{
+    else {
         document.getElementById("mensaje").textContent = "El campo es obligatorio y tiene que tener 3 y 30 caracteres";
     }
 }
 
-//Historia 2: Mostrar la respuesta correcta
-function corregirRespuesta() {
-    //Recogemos los valores
-    let respuesta = document.getElementById("respuestaExamen").value;
-    let mensaje = 0;
+//Corregir examen
+function corregirExamen() {
 
-    //Según si la respuesta es correcta o no, damos una respuesta u otra
-    if(respuesta === "respuesta1") {
-        mensaje = 2;
-        
+    let mensajePunt = 0;
+    let puntuacionFinal = 0;
+
+    for (let i = 0; i < 10; i++) {
+        mensajePunt = corregirPregunta(i);
+        document.getElementById("puntuacion" + i).textContent = "Tu puntación: " + mensajePunt;
+        puntuacionFinal = puntuacionFinal + mensajePunt;
     }
 
-    else if(respuesta === "respuesta2" ) {
-        mensaje = -1;
+    if (puntuacionFinal < 0) {
+        puntuacionFinal = 0;
     }
 
-    else if(respuesta === "respuesta3" ) {
-        mensaje = -1;
+    if (puntuacionFinal > 12) {
+        document.getElementById("puntuacionFinal").style.color = "green";
+    }
+    else {
+        document.getElementById("puntuacionFinal").style.color = "red";
+    }
+    document.getElementById("puntuacionFinal").textContent = "Tu puntuación final " + puntuacionFinal;
+}
+
+//Corregir pregunta
+function corregirPregunta(idPregunta) {
+
+    let respuesta = document.getElementById("respuestaExamen" + idPregunta).value;
+    let puntos = 0;
+
+    let respuestaCorrecta = ["respuesta1", "respuesta2", "respuesta2", "respuesta3", "respuesta3", "respuesta3", "respuesta3", "respuesta3", "respuesta1", "respuesta3"];
+
+    if (respuesta === "respuesta4") {
+        puntos = 0;
+    }
+    else if (respuesta === respuestaCorrecta[idPregunta]) {
+        puntos = 2;
+    }
+    else {
+        puntos = -1;
     }
 
-
-    document.getElementById("puntuacion").textContent = "Tu puntuación: " + mensaje;
-
+    return puntos;
 }
