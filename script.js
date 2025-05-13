@@ -38,7 +38,7 @@ function corregirExamen() {
 
     for (let i = 0; i < 10; i++) {
         mensajePunt = corregirPregunta(i);
-        document.getElementById("puntuacion" + i).textContent = "Tu puntación: " + mensajePunt;
+        document.getElementById("puntuacion" + i).textContent = "Tu puntuación: " + mensajePunt;
         puntuacionFinal = puntuacionFinal + mensajePunt;
     }
 
