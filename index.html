@@ -31,7 +31,7 @@
         <h2>Exam</h2>
         <form id="formQuestion1">
             <label>What is the main difference between testing and debugging?</label>
-            <select id="respuestaExamen0">
+            <select id="respuestaExamen0" datatest-id="respuestaExamenNum0">
                 <option value="respuesta4">Sin respuesta</option>
                 <option value="respuesta1">Testing is the process of finding defects, while debugging is the process of
                     fixing defects.</option>
@@ -48,7 +48,7 @@
                 In the current iteration the team decides to implement the payment
                 functionality.Which of the following activities is a part of test analysis?
             </label>
-            <select id="respuestaExamen1">
+            <select id="respuestaExamen1" datatest-id="respuestaExamenNum1">
                 <option value="respuesta4">Sin respuesta</option>
                 <option value="respuesta1">Perform the effort estimation for testing the integration of the mobile
                     application with the payment service.</option>
@@ -65,7 +65,7 @@
             <label>Which of the following statements BEST describes how value is added by
                 establishing and maintaining traceability between the test base and the
                 test ware?</label>
-            <select id="respuestaExamen2">
+            <select id="respuestaExamen2" datatest-id="respuestaExamenNum2">
                 <option value="respuesta4">Sin respuesta</option>
                 <option value="respuesta1">Maintenance testing can be fully automated on the basis of changes to the
                     original requirements - correcta.</option>
@@ -80,7 +80,7 @@
 
             <label>Which of the following statements BEST compares the different roles in
                 testing?</label>
-            <select id="respuestaExamen3">
+            <select id="respuestaExamen3" datatest-id="respuestaExamenNum3">
                 <option value="respuesta4">Sin respuesta</option>
                 <option value="respuesta1">The testing role executes test cases, the test management role plans and
                     monitors the testing activities and reports the deviation to all testers.</option>
@@ -97,7 +97,7 @@
 
             <label>Which of the following BEST explains a benefit of independence of
                 testing?</label>
-            <select id="respuestaExamen4">
+            <select id="respuestaExamen4" datatest-id="respuestaExamenNum4">
                 <option value="respuesta4">Sin respuesta</option>
                 <option value="respuesta1">The use of an independent test team allows project management to assign
                     responsibility for the quality of the final deliverable to the test team.</option>
@@ -115,7 +115,7 @@
 
             <label>How is the whole team approach present in the interactions between
                 testers and business representatives?</label>
-            <select id="respuestaExamen5">
+            <select id="respuestaExamen5" datatest-id="respuestaExamenNum5">
                 <option value="respuesta4">Sin respuesta</option>
                 <option value="respuesta1">Business representatives decide together with project management on test
                     automation approaches.</option>
@@ -128,7 +128,7 @@
 
             <label>Which of the following statements BEST describes a good practice for
                 testing that applies to all software development lifecycles?</label>
-            <select id="respuestaExamen6">
+            <select id="respuestaExamen6" datatest-id="respuestaExamenNum6">
                 <option value="respuesta4">Sin respuesta</option>
                 <option value="respuesta1">Testing should be performed only after development is complete.</option>
                 <option value="respuesta2">Testing should be performed under the leadership of development.</option>
@@ -139,7 +139,7 @@
             <p></p>
 
             <label>Which of the following statements BEST describes the acceptance testdriven development (ATDD) approach?</label>
-            <select id="respuestaExamen7">
+            <select id="respuestaExamen7" datatest-id="respuestaExamenNum7">
                 <option value="respuesta4">Sin respuesta</option>
                 <option value="respuesta1">In ATDD, acceptance criteria are typically created based on the
                     given/when/then format.</option>
@@ -153,7 +153,7 @@
             <p></p>
 
             <label>Which of the following is NOT an example of the shift left approach?</label>
-            <select id="respuestaExamen8">
+            <select id="respuestaExamen8" datatest-id="respuestaExamenNum8">
                 <option value="respuesta4">Sin respuesta</option>
                 <option value="respuesta1">Reviewing the user requirements before they are formally accepted by the
                     stakeholders.</option>
@@ -167,7 +167,7 @@
 
             <label>Which of the arguments below would you use to convince your manager
                 to organize retrospectives at the end of each release cycle?</label>
-            <select id="respuestaExamen9">
+            <select id="respuestaExamen9" datatest-id="respuestaExamenNum9">
                 <option value="respuesta4">Sin respuesta</option>
                 <option value="respuesta1">Retrospectives are very popular these days and clients would appreciate it if
                     we added them to our processes.</option>
@@ -183,7 +183,7 @@
             <p></p>
 
             <button type="button" onclick="corregirExamen()">Finalizar examen</button>
-            <p id="puntuacionFinal"></p>
+            <p id="puntuacionFinal" datatest-id="puntuacionalumnofinal"></p>
             
 
         </form>
